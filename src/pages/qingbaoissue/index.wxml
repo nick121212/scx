@@ -1,0 +1,15 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__bd">
+        <view class="weui-cells__title">选择要查看的期刊？</view>
+        <view class="weui-cells weui-cells_after-title">
+            <radio-group bindchange="radioChange">
+                <label class="checkbox" wx:for-items="{{issues}}">
+                 <radio value="{{item.issueId}}"/>{{item.issueId}}期
+                 </label>
+            </radio-group>
+        </view>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="gotoqingbaodetail">确定</button>
+        </view>
+    </view>
+</view>

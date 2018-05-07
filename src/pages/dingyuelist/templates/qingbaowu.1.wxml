@@ -1,0 +1,62 @@
+<!-- <template name="dingyue_qingbaowu"> -->
+    <view class="weui-panel weui-panel_access shulian">
+        <view class="weui-panel__bd">
+
+            <!--点击查看最新(期刊号最大)一期的期刊详情  -->
+            <!-- <navigator url="/pages/qingbaodetail/index?id={{qingbao.id}}&styleid={{qingbao.styleId}}"  -->
+            <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{qingbaolst}}" wx:key="{{styleId}}"
+                wx:for-index="id" wx:for-item="qingbao">
+                <!-- <view  class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" src="../../../images/WechatIMG113.png" />
+                </view> -->
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+
+                    <view bindtap="gotodetail" data-id="{{qingbao.id}}" data-styleid="{{qingbao.styleId}}" data-url="{{qingbao.url}}">
+                        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                            <image class="weui-media-box__thumb" src="../../../images/WechatIMG113.png" />
+                        </view>
+                        <view class="weui-media-box__desc" style="margin:40rpx 0;">专家纬度分析，重点推荐</view>
+                        <view class="weui-media-box__title">{{qingbao.title}}</view>
+                        <view class="weui-media-box__desc">{{qingbao.introduction}}</view>
+                        <view class="weui-media-box__desc" style="color:#000;margin:10rpx 0;">订阅一季三个月，{{qingbao.period}}一发刊，共{{qingbao.pushNum}}期推送</view>
+
+                    </view>
+
+                    <view class="weui-media-box__info">
+                        <image catchtap="showdissues" data-id="{{qingbao.id}}" class="weui-media-box__thumb_32" src="../../../images/icon_nav_form.png"></image>
+
+                        <view wx:if="{{qingbao.open}}" class="kind-list__item-bd  kind-list__item-bd_show">
+                            <view class="weui-cells weui-cells_show">
+                                <block wx:for="{{issues}}" wx:for-item="issue" wx:key="*this">
+                                    <navigator url="/pages/qingbaodetail/index?id={{qingbao.id}}&styleid={{qingbao.styleId}}&issueid={{qingbao.issueId}}" class="weui-cell weui-cell_access">
+                                        <view class="weui-cell__bd">{{issue.issueId}}期</view>
+                                        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                                    </navigator>
+                                </block>
+                            </view>
+                        </view>
+                        <view style="float:right;">
+                            <view class="weui-media-box__info__meta">
+                                <image class="weui-media-box__thumb_32" src="../../../images/preview_64_64.png" />
+                                <label>900</label>
+                            </view>
+                            <view class="weui-media-box__info__meta">
+                                <image class="weui-media-box__thumb_32" src="../../../images/like_64_64.png" />
+                                <label>710</label>
+                            </view>
+                        </view>
+                    </view>
+
+                </view>
+            </view>
+            <!-- </navigator> -->
+        </view>
+
+        <view class="weui-loadmore weui-loadmore_line" wx:if="{{articles.length===0 && !hasMore  && !loading}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+        </view>
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" wx:if="{{articles.length && !hasMore&& !loading}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+    </view>
+<!-- </template> -->

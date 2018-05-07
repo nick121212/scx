@@ -1,0 +1,24 @@
+<view class="page">
+    <view class="page__bd">
+
+        <!-- <view class="weui-cells__title">基础信息</view> -->
+        <view class="shop_top_info">
+            <view class="shop_info">
+                <image class='shop_img' src="{{usrinfo.brand_logo}}" />
+                <view class='shop_name'>{{usrinfo.shop_name}}</view>
+                <view class='shop_contanct'>{{usrinfo.phone_number}}</view>
+
+            </view>
+            <view class='show_more_info'>
+            <textinfo>城市：{{usrinfo.city_name}}</textinfo>
+            <textinfo>商场：{{usrinfo.market_name}}</textinfo>
+            <textinfo>楼层：{{usrinfo.floor_number}}</textinfo>
+            </view>
+
+        </view>
+       <view class="title">类目</view>        
+       <textinfo class="is_L">
+           <block  wx:for="{{usrinfo.category_names}}">{{item}}</block>
+        </textinfo>
+    </view>
+</view>

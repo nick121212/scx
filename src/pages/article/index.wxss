@@ -1,0 +1,92 @@
+img {
+    width: 80% !important;
+    background-size: contain;
+}
+
+.page__hd {
+    padding: 20px;
+    font-size: 22px;
+}
+
+.article-baseinfo {
+    background: rgba(60, 60, 60, 0.05);
+    width: 100%;
+    font-size: 12px;
+    color: #999;
+}
+
+.article-baseinfo>label {
+    display: inline-block;
+    float: right;
+    padding: 12px 12px 0;
+}
+
+.article-baseinfo>label:first-child {
+    float: left;
+}
+
+.clear {
+    display: block;
+    clear: both;
+    zoom: 1;
+}
+
+.article-price-info {
+    text-align: right;
+    padding-right: 12px;
+}
+
+.article-price-info label {
+    display: inline-block;
+    padding: 5px 5px 12px;
+    font-size: 20rpx;
+    color: rgb(220, 60, 60);
+}
+
+.article-price-info .discount {
+    color: rgba(60, 60, 60, 0.5);
+    text-decoration: line-through;
+}
+
+.article-price-info view {
+    display: inline-block;
+    float: left;
+    padding: 5px 12px;
+}
+
+.author-info {
+    border-top: 3px solid #eee;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    font-size: 14px;
+    line-height: 80px;
+    padding: 20px;
+    color: #888;
+    position: relative;
+}
+
+.author-info image {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+    float: left;
+}
+
+.author-info label {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    left: 110px;
+    right: 20px;
+    height: 60px;
+}
+
+.page__hd {
+    padding: 20px 20px 5px;
+}
+
+.page__desc {
+    font-size: 12px;
+    color: #ccc;
+}

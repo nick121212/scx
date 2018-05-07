@@ -1,0 +1,8 @@
+<template name="chart">
+
+    <view class="page">
+        <canvas canvas-id="homeChart" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+        <button style="display:none;"  type="primary" bindtap="">更新数据</button>
+    </view>
+
+</template>

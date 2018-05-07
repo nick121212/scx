@@ -1,0 +1,42 @@
+<template name="ohistory">
+
+<!--
+
+约到了【xx】先生、女士
+这位客户刚在【汶水商场】买的【床垫】
+本单优惠信息：7折
+发送给到用户的邀约信息：满1000减500
+抢单时间：【2017-10-20 14:25】
+
+<scroll-view scroll-y style="height: {{baseinfo.windowHeight - 55}}px;" bindscrolltolower="loadMoreHistory" >-->
+    <view class="weui-panel">
+        <view class="weui-panel__bd">
+             <view class="weui-loadmore" wx:if="{{loading}}">
+                <view class="weui-loading"></view>
+                <view class="weui-loadmore__tips">正在加载</view>
+            </view>
+            <view class="weui-media-box weui-media-box_text" 
+                wx:for="{{orders}}" 
+                wx:key="*this"
+                wx:for-index="id" wx:for-item="order">
+                <view class="weui-media-box__title weui-media-box__title_in-text">
+                    约到了【{{order.orderCreateUser}}】先生、女士，这位客户刚在【{{order.oldShopName}}】买的【{{order.orderProductName}}】
+                </view>
+                <view class="weui-media-box__desc">发送内容：{{order.benefitInfo}}</view>
+                <view class="weui-media-box__info">
+                    <view class="weui-media-box__info__meta">{{order.createTime}}</view>
+                </view>
+            </view>
+        </view>
+
+        
+        <view class="weui-loadmore weui-loadmore_line" wx:if="{{orders.length===0 && !hasMore  && !loading}}">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+        </view>
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" wx:if="{{orders.length && !hasMore&& !loading}}">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+
+    </view>
+<!--</scroll-view>-->
+</template>

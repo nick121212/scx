@@ -1,0 +1,104 @@
+/* page {
+    font-size: 14px;
+    color: #333
+} */
+
+
+page {
+
+    height:100%;
+
+}
+
+.page{
+
+    height:100%;
+    background:rgba(60,60,60,0.05);
+}
+
+.weui-navbar__title{
+    font-size:16px;
+}
+
+.weui-media-box__desc{
+    font-size:16px;
+    color:rgba(0,0,0,0.85);
+    -webkit-line-clamp: 3;
+
+}
+.message_info{
+    background:white;
+    border-bottom:0px solid white;
+}
+
+.weui-cells__title{
+background:white;
+margin:0px;
+padding-top:60px;
+padding-bottom:4px;
+}
+
+.weui-tab__panel{
+    padding-top:48px;
+
+}
+
+button {
+    font-size:16px;
+}
+
+.weui-cells_after-title{
+-border-top:1px solid rgba(60,230,60,0.95);
+}
+
+
+.table {
+    border: 1px solid #dadada;
+    border-right: 0rpx;
+    border-bottom: 0rpx;
+    width:100%
+
+}
+.tr {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    background:white;
+}
+.td {
+    padding: 15px 10px 15px 10px;
+    min-height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+
+    border-bottom: 1px solid #dadada;
+    -border-right: 1px solid #dadada;
+    -text-align: center;
+    width:100%
+}
+.weui-navbar__slider {
+    width: 10rem;
+}
+
+
+.td.is_time_info{
+    color: rgba(60,60,60,0.3);
+    font-size: 12px;
+
+}
+.th {
+    width:100%;
+    -font-weight: 400;
+    background-color: rgba(30,30,30,0.05);
+    padding:5px 10px 5px 10px ;
+    font-size: 14px;
+    color: rgba(60,60,60,0.8);
+    -border-bottom: 1px solid rgba(30,30,30,0.15);
+    -box-shadow: 0px 5px 15px 0px rgba(30,30,30,0.15);
+}
+  .title
+{
+    margin-right: 0rpx;
+    background-color: grey;
+
+}

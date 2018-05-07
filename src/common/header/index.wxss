@@ -1,0 +1,77 @@
+.header {
+    background-color: #1aad19;
+    height: 320rpx;
+    position: relative;
+    background-image:linear-gradient(175deg,#1aad19 20%,rgba(98, 255, 0, 0.8) 90%);
+}
+
+.header.mini {
+    height: 200rpx;
+}
+
+.header .avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 5rpx;
+    background: white;
+    box-shadow: 0 0 10px 0 rgba(30, 30, 30, 0.2);
+    margin: 40rpx 25rpx 30rpx 25rpx;
+}
+
+.header .info {
+    position: relative;
+    top: -52rpx;
+    display: inline-block;
+    color: #fff;
+}
+
+.header .store {
+    display: block;
+    font-size: 24rpx;
+}
+
+.header .name {
+    display: block;
+}
+
+.header .base-info {
+    position: absolute;
+    bottom: 0;
+    right: 20rpx;
+    color: #fff;
+}
+
+.header .base-info-1 {
+    font-size: 24rpx;
+    display: block;
+    line-height: 0;
+}
+
+.header .base-info-2 {
+    font-size: 24rpx;
+    display: inline-block;
+    line-height: 30rpx;
+}
+
+.header .base-info-2 label {
+    display: block;
+}
+
+.header .base-info-num {
+    font-size: 70rpx;
+    margin-right: 10rpx;
+}
+
+.header .switch,
+.header .tip {
+    position: absolute;
+    right: 20rpx;
+    bottom: 60rpx;
+}
+
+.header .tip {
+    bottom: 130rpx;
+    font-size: 20rpx;
+    right: 55rpx;
+    color: white;
+}

@@ -1,0 +1,30 @@
+<view class="page">
+
+  <view class="page__hd">
+    <view class="page__title">{{article.title}}</view>
+    <view class="page__desc">{{article.create_time}}</view>
+  </view>
+   <view class="article-baseinfo">
+    <label>{{article.author_name}}</label>
+    <label>{{article.category_tags}}</label>
+    <view class="clear"></view>
+    <view class="article-price-info">
+        <view>{{article.tags}}</view>
+        <label>{{article.sale_price}}</label>
+        <label class="discount">{{article.discount_price}}</label>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__section">
+        <rich-text nodes="{{article.content}}"></rich-text>
+      </view>
+    </view>
+  </view>
+
+  <view class="author-info">
+      <image wx:if="{{article.author_url}}" src="{{article.author_url?article.author_url:''}}"></image>
+      <label>{{article.author_name}}</label>
+  </view> 
+
+</view>

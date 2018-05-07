@@ -1,0 +1,96 @@
+/* baseInfo.wxss *//* baseInfo.wxss */
+.title
+{
+    margin-bottom: 30rpx;
+    background-color: #bbb;
+    width:30%
+
+}
+.weui-form-preview{
+    margin-bottom: 25px;
+}
+.otherclassify
+{
+    width: 100rpx;
+
+}
+
+page{
+height:100%;
+}
+
+.page{
+background:rgba(60,60,60,0.05);
+height:100%;
+}
+
+view.shop_top_info {
+    padding-bottom:10px;
+    background: white;
+    border-bottom:1px solid rgba(60,60,60,0.15);
+}
+
+view.shop_info{
+    width:100%;
+    min-height:100px;
+    position:relative;
+    overflow:hidden;
+}
+
+
+
+image.shop_img{
+    width:65px;
+    height:65px;
+    position:absolute;
+    margin-top:15px;
+    margin-left:15px;
+    box-shadow:0px 0px 15px rgba(30,30,30,0.15);
+}
+
+view.shop_name{
+    position:absolute;
+    top:15px;
+    margin-left:95px;
+    font-size:17px;
+}
+
+view.shop_contanct{
+    position:absolute;
+    top:42px;
+    margin-left:95px;
+    font-size:13px;
+    color:rgba(30,30,30,0.45);
+
+}
+
+textinfo{
+    display:flex;
+    margin-left:20px;
+    margin-right:20px;
+    -border-top:1px solid rgba(60,60,60,0.1);
+    font-size:14px;
+    color:gray;
+    line-heihgt:22px;
+    height:21px;
+    padding-top:3px;
+    padding-bottom:3px;
+}
+
+.is_L{
+    font-size:16px;
+    display:inline-block;
+    width:90%;
+
+}
+
+view.title{
+    display:inline-block;
+    margin-left:20px;
+    margin-top:30rpx;
+    font-size:12px;
+    height:22px;
+    line-height:22px;
+    background:none;
+    margin-bottom:3px;
+}

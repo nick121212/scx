@@ -1,0 +1,16 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__bd">
+        <view class="weui-cells__title">选择开启约客推送信息？</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_switch">
+                <view class="weui-cell__bd">短信接收开关</view>
+                <view class="weui-cell__ft">
+                    <switch checked="{{enableMessage}}" bindchange="enableMessageChanged" />
+                </view>
+            </view>
+        </view>
+           <button class="weui-btn" type="default" bindtap = "exitlogin">
+               <label style="color:red">退出登录</label>
+           </button>
+    </view>
+</view>

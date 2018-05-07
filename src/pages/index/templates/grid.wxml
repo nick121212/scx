@@ -1,0 +1,59 @@
+<template name="index-grid">
+    <view style="background-color:#fff;">
+        <view class="weui-grids">
+            <navigator url="/pages/dingyuelist/index" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="../../../images/WechatIMG111.png" />
+                <view class="weui-grid__label">我的订阅</view>
+            </navigator>
+            <navigator url="/pages/articlelist/index" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="../../../images/WechatIMG112.png" />
+                <view class="weui-grid__label">数联帮</view>
+            </navigator>
+            <navigator url="{{usrinfo.shop_id != null ?'/pages/qingbaolist/index':'/pages/welcome/loading/index' }}" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="../../../images/WechatIMG113.png" />
+                <view class="weui-grid__label">情报物</view>
+            </navigator>
+        </view>
+
+        <view class="weui-grids weui-grids-custom">
+            <label>
+            <view  class="weui-grid" hover-class="weui-grid_active">
+                <view class="weui-grid__label">商场订单数</view>
+                <view class="weui-grid__label weui-grid__label-1">{{extradata.marketOrder == undefined ? 0: extradata.marketOrder}}</view>
+            </view>
+        </label>
+            <label>
+            <view class="weui-grid" hover-class="weui-grid_active">
+                <view class="weui-grid__label">推荐商户数</view>
+                <view class="weui-grid__label weui-grid__label-1">{{extradata.skuShop == undefined ? 0 :extradata.skuShop}}</view>
+            </view>
+        </label>
+            <label>
+            <view class="weui-grid" hover-class="weui-grid_active">
+                <view class="weui-grid__label">抢单人数</view>
+                <view class="weui-grid__label weui-grid__label-1">{{extradata.qiangdanOrder == undefined ? 0:extradata.qiangdanOrder}}</view>
+            </view>
+        </label>
+            <label>
+            <view class="weui-grid" hover-class="weui-grid_active">
+                <button class='button_qiangyue'  type="primary" size="normal" bindtap = "gotoorder" hover-class="other-button-hover">
+                    <label>
+                        一键联单
+                    </label>
+            </button>
+        </view>
+        </label>
+
+        <label>
+            <view class="weui-grid is_large" hover-class="weui-grid_active">
+             <label class="tip">有联单机会短信通知：{{enableMessage && usrinfo.brand_logo != undefined?"开启":"关闭"}}</label>
+             <image  catchtap = "gotowhatpage" class="qa__icon" src="../../../images/qa.png" />
+             <switch class="switch"  disabled="{{usrinfo.brand_logo == undefined}}" checked="{{usrinfo.brand_logo != undefined&&enableMessage}}" bindchange="enableMessageChanged"> </switch>
+               
+             
+             </view>
+         </label>
+    </view>
+    <view style="border-bottom: 1rpx #ddd solid"></view>
+    </view>
+</template>

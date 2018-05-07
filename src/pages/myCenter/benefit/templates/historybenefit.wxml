@@ -1,0 +1,14 @@
+
+<template name="historybenefit">
+    <view class="table">
+        <view class="tr">
+            <view class="th">内容</view>
+            <view class="th">创建时间</view>
+        </view>
+        <view class="tr" wx:for="{{historybenefits}}">
+            <view class="td">{{item.benefit_message}}</view>
+            <view class="td is_time_info">{{item.update_time}}</view>
+        </view>
+
+    </view>
+</template>

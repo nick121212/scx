@@ -1,0 +1,33 @@
+<template name="benefit">
+    <view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+        <form bindsubmit="formSubmit">
+
+            <view class="message_info weui-panel_access">
+                <!-- <view class="weui-panel__hd">当前信息</view> -->
+                <view class="weui-panel__bd">
+                    <view class="weui-media-box weui-media-box_text">
+                        <view wx:if="{{isLoaded}}">
+                            <view wx:if="{{curbenefitMsg}}" class="weui-media-box__desc">{{curbenefitMsg}}</view>
+                            <view wx:else class="weui-media-box__desc">您的店铺还没有约客信息哦，设置一个约客信息可以快速吸引在周边逛店的潜在顾客到店呦</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-cells__title">点击下方空白更改内容</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell">
+
+                    <view class="weui-cell__bd">
+                        <!-- <textarea name="benefitvalue"  class="weui-textarea" placeholder="请输入新的约客信息" style="height: 3.3em"/> -->
+                          <textarea name="benefitvalue" value="{{newbenefitMsg}} " class="weui-textarea" placeholder="请输入新的约客信息" style="height: 3.3em"/> 
+                    </view>
+                </view>
+            </view>
+
+            <view class="weui-btn-area">
+                <button class="weui-btn" formType="submit" type="primary">确定</button>
+            </view>
+
+        </form>
+    </view>
+</template>

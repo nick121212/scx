@@ -1,0 +1,27 @@
+
+<import src="./templates/chart.wxml" />
+
+
+<import src="./templates/header.wxml" />
+<import src="./templates/grid.wxml" />
+  <import src="./templates/shulian.wxml" /> 
+ <import src="./templates/qingbao.wxml" />
+<!-- <import src="./templates/dingyue.wxml" />   -->
+
+<template is="index-header" data = "{{extradata:grid.extradata,usrinfo:usrinfo}}"></template>
+<template is="index-grid" data = "{{extradata:grid.extradata,usrinfo:usrinfo,enableMessage:enableMessage}}"></template>
+ <template is="index-shulian" data="{{articles:articleLstIndexPage}}"></template>
+ <template is="index-qingbao" data="{{qingbaolst:qingbaoIndexPage,usrinfo:usrinfo,sysinfo:sysinfo}}"></template> 
+ <!-- <template is="index-qingbao" data="{{qingbaolst:qingbaoIndexPage}}"></template>  
+ <template is="index-grid" data = "{{extradata:extradata}}"></template> -->
+<!-- <template is="index-dingyue"></template> -->
+
+<!-- 快速入门教程
+    <navigator url="/pages/article/index?id=0" class="article_banner" hover-class="weui-cell_active">
+        <image src="../../images/banner.png" />
+    </navigator> -->
+
+
+
+<template is="banner" data="{{banners:banner.banners,touchBanner,...banner}}"></template>
+<!-- <template is="chart" data="{{touchHandler:touchHandler}}" /> -->

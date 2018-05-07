@@ -1,0 +1,39 @@
+<template name="dingyue_shulianbang">
+    <view class="weui-panel weui-panel_access shulian">
+        <view class="weui-panel__bd">
+            <navigator url="/pages/article/index?id={{article.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active"
+                wx:for="{{articles}}" wx:key="{{id}}" wx:for-index="id" wx:for-item="article">
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">{{article.title}}</view>
+                    <view>
+                        <image src="{{article.cover_img_url}}" class="cover-image" />
+                    </view>
+                    <view class="weui-media-box__desc">{{article.sub_title}}</view>
+                    <!-- <view class="weui-media-box__info">
+                        <view style="float:right;">
+                            <view class="weui-media-box__info__meta">
+                                <image class="weui-media-box__thumb_32" src="../../../images/preview_64_64.png" />
+                                <label>900</label>
+                            </view>
+                            <view class="weui-media-box__info__meta">
+                                <image class="weui-media-box__thumb_32" src="../../../images/like_64_64.png" />
+                                <label>710</label>
+                            </view>
+                        </view>
+                    </view> -->
+
+                </view>
+
+            </navigator>
+
+
+        </view>
+
+        <view class="weui-loadmore weui-loadmore_line" wx:if="{{articles.length===0 && !hasMore  && !loading}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">您还没有订阅数联邦</view>
+        </view>
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" wx:if="{{articles.length && !hasMore&& !loading}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+    </view>
+</template>

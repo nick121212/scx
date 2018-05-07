@@ -1,0 +1,29 @@
+
+<view class="page">
+        <view class="login_progress">1/3</view>
+    <view class="page__bd">
+        <!-- <view class="weui-cells__title">基础信息确认</view> -->
+        <view class="shop_top_info">
+            <view class="shop_info">
+                <image class='shop_img' src="{{shopinfo.brand_logo}}" />
+                <view class='shop_name'>{{shopinfo.shop_name}}</view>
+                <view class='shop_contanct'>{{shopinfo.phone_number}}</view>
+
+            </view>
+            <view class='show_more_info'>
+            <!--<textinfo>{{shopinfo.city_name}}</textinfo>-->
+            <textinfo>{{shopinfo.market_name}}</textinfo>
+            <textinfo>{{shopinfo.floor_number}}层</textinfo>
+            </view>
+
+        </view>
+        <view class="title">类目</view>
+        <textinfo class="is_L">
+           <block class="otherclassify" wx:for="{{shopinfo.category_names}}">{{item}}</block>
+        </textinfo>
+        
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary"  bindtap="next">下一步</button>
+        </view>
+    </view>
+</view>

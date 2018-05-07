@@ -1,0 +1,49 @@
+<template name="article">
+  <view class="page">
+    <view class="page__bd">
+      <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__hd">
+          <label>数联头条</label>
+          <navigator url="/pages/articlelist/index" hover-class="weui-cell_active">
+            <label style="text-align:right">更多资讯...</label>
+          </navigator>
+
+        </view>
+        <view class="weui-panel__bd">
+          <view class="weui-loadmore" wx:if="{{loading}}">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+          </view>
+          <!-- <label style ="margin-left:0px">更多...</label> -->
+          <navigator url="/pages/article/index?id={{article.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active"
+            wx:for="{{articles}}" wx:key="{{id}}" wx:for-index="id" wx:for-item="article">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <image class="weui-media-box__thumb article_image" src="{{article.cover_img_url}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{article.title}}</view>
+              <view class="weui-media-box__desc ">
+                <label>{{article.category_tags}}</label>
+                <label style="float:right;display:inline-block;">{{article.tags}}</label>
+              </view>
+
+              <view class="weui-media-box__desc article-item-price">
+                <label wx:if="{{article.discount_price}}">{{article.discount_price}}</label>
+                <label>{{article.sale_price}}</label>
+              </view>
+            </view>
+          </navigator>
+        </view>
+
+
+        <view class="weui-loadmore weui-loadmore_line" wx:if="{{articles.length===0 && !hasMore && !loading}}">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+        </view>
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" wx:if="{{articles.length && !hasMore && !loading}}">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</template>

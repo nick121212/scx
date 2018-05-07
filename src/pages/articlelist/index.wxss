@@ -1,0 +1,246 @@
+.slide-image {
+    width: 100%;
+    height: 150px;
+}
+
+.header {
+    background-color: #1aad19;
+    height: 320rpx;
+    position: relative;
+}
+
+.header .avatar {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    margin: 40rpx 20rpx;
+}
+
+.header .info {
+    position: relative;
+    top: -40rpx;
+    display: inline-block;
+    color: #fff;
+}
+
+.header .store {
+    display: block;
+    font-size: 24rpx;
+}
+
+.header .name {
+    display: block;
+}
+
+.header .base-info {
+    position: absolute;
+    bottom: 0;
+    right: 20rpx;
+    color: #fff;
+}
+
+.header .base-info-1 {
+    font-size: 24rpx;
+    display: block;
+    line-height: 0;
+}
+
+.header .base-info-2 {
+    font-size: 24rpx;
+    display: inline-block;
+    line-height: 30rpx;
+}
+
+.header .base-info-2 label {
+    display: block;
+}
+
+.header .base-info-num {
+    font-size: 70rpx;
+    margin-right: 10rpx;
+}
+
+.weui-grids {
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    border-left: none;
+    margin: 10rpx 0;
+}
+
+.weui-grid {
+    margin: 10rpx 0;
+    border-bottom: none;
+}
+
+.weui-grid:last-child {
+    border-right: none;
+}
+
+.weui-grids-custom {
+    border: none;
+}
+
+.weui-grids-custom .weui-grid {
+    width: 25%;
+    border: none;
+    margin: 0;
+    padding: 10rpx;
+}
+
+.weui-grids-custom .weui-grid__label {
+    font-size: 24rpx;
+}
+
+.weui-grids-custom .weui-grid__label-1 {
+    font-size: 48rpx;
+}
+
+.shulian .cover-image {
+    width: 100%;
+}
+
+
+.shulian .image_inside{
+    -display:inline-block;
+    -height:150px;
+    width:92%;
+    margin-left:4%;
+    overflow:hidden;
+}
+
+.shulian .weui-media-box__info {
+    border-top: 1rpx solid rgba(60,60,60,0.05);
+    padding-top: 12px;
+    height:20px;
+    -background:rgba(60,60,80,0.05);
+
+}
+
+.price {
+    color: red;
+}
+
+.price-free {
+    -text-decoration: line-through;
+    margin-left:10px;
+    color:rgba(60,60,60,0.5);
+}
+
+.freecolor{
+    margin-top:-2px;
+
+    color: white   ;
+    text-decoration: none;
+    font-style:normal;
+    font-size:12px;
+    border-radius:3px;
+    padding-top:2px;
+    height:16px;
+    background:rgba(70,190,100,0.8);  
+}
+
+.weui-media-box__thumb_32 {
+    width: 32rpx !important;
+    height: 32rpx;
+    display: inline-block;
+}
+.yidingyue {
+  color: green;
+}
+.weui-media-box__thumb_32~label {
+    display: block;
+    float: right;
+    margin: 5rpx;
+}
+
+.weui-panel::after {
+    border-bottom: none;
+}
+
+.article_image {
+    background-size: contain;
+    border: 1px solid #eee;
+}
+
+.article_banner {
+    padding: 0;
+    height: 310rpx;
+}
+
+.article_banner image {
+    width: 100%;
+    -height:50px;
+    object-fit:cover;
+    -display:inline-block;
+}
+
+.weui-media-box__title {
+    font-size: 19px;
+    color: rgba(60, 60, 60, 0.85);
+    margin-bottom: 0px;
+    display:inline-box;
+    padding-top:10px;
+    padding-bottom:10px;
+    width:98%;
+    padding-left:3%;
+    -background:rgba(60,60,60,0.01);
+    border-bottom: 1px solid rgba(60,60,60,0.05);
+}
+
+.article_banner .image_inside{
+    -display:inline-block;
+    -height:150px;
+    width:92%;
+    margin-left:4%;
+    overflow:hidden;
+}
+
+.article-item-price {
+    border-top: 1px solid #f9f9f9;
+    margin-top: 5px;
+    display: block;
+    padding: 10rpx;
+}
+
+.article-item-price label {
+    display: inline-block;
+    margin: 5rpx 10rpx;
+    font-size: 12px;
+    color: rgba(230, 60, 60,0.8);
+}
+
+.article-item-price label:first-child {
+    color: rgba(60, 60, 60, 0.4);
+    text-decoration: line-through;
+    margin-left:-4px;
+}
+
+.weui-panel__hd{
+padding-top:6px;
+font-size:12px;
+padding-bottom:5px;
+box-shadow:0px 5px 80px 0px rgba(60,60,60,0.25);
+
+}
+.weui-panel__bd{
+    padding:0px;
+    background:rgba(60,60,60,0.05);
+}
+
+.weui-media-box {
+    padding: 0;
+    background:white;
+    border-top:0px solid white;
+    border-bottom:9px solid rgba(60,60,60,0.05);
+}
+
+.weui-media-box__hd_in-appmsg {
+    top: -11px;
+    position: relative;
+    margin-left:-2px;
+}
+
+.weui-media-box__desc {
+    color: #ccc;
+    font-size: 12px;
+}

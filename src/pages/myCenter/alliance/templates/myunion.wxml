@@ -1,0 +1,49 @@
+<template name="myunion">
+        <view wx:if = "{{myunions.length > 0}}" class="nav">
+             <scroll-view scroll-y style="height:{{baseinfo.windowHeight - 150}}px;" class="nav_left">
+        
+                   <checkbox-group bindchange="mgrMyUion">
+                        <label class="group_one weui-check__label " wx:for-items="{{myunions}}">
+                        <checkbox class="weui-check" value="{{item.shop_union_id}}" />
+                        
+                        <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                            <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+                            <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+                        </view>
+                       <view class="union_name">{{item.shop_union_name}}</view>
+
+                    </label>
+                    </checkbox-group>
+
+
+
+
+
+            </scroll-view>
+            <scroll-view scroll-y style="height:{{baseinfo.windowHeight - 150}}px;" class="nav_right">
+                <view wx:if="{{myunionshops.length > 0}}">
+                    <block wx:for="{{myunionshops}}">
+                        <view class="nav_right_items">
+                            <view>
+                                <block wx:if="{{item.brand_logo != null}}">
+                                    <image src="{{item.brand_logo}}"></image>
+                                </block>
+                                <block wx:else>
+                                      <image src="/images/default.png"></image>
+                                </block>
+                            </view>
+                            <view>
+                                <text> {{item.shop_name}}</text>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </scroll-view >
+
+        </view>
+         <!-- <view class = "login_progress" wx:else>您还没有加入任何商户组哦，加入相关联的商户组，提升周边关联的用户到店呦</view>  -->
+    <!-- </scroll-view> -->
+    <view wx:if = "{{myunions.length > 0}}" class="weui-btn-area">
+        <button class="weui-btn" type="primary"  bindtap="exitUnion">退出所选商户组</button>
+    </view>
+</template>

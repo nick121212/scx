@@ -1,0 +1,16 @@
+<view class="page">
+    <view class="page__bd">
+
+        <view class="weui-panel__bd">
+
+            <radio-group bindchange="radioChange">
+                <view wx:for="{{items}}">
+                    <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+                </view>
+            </radio-group>
+
+            <view class="weui-media-box__desc">成为会员，可以免费看所有文章。</view>
+            <button class="weui-btn" type="primary" bindtap="onBuy">购买</button>
+        </view>
+    </view>
+</view>

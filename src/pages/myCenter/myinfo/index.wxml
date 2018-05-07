@@ -1,0 +1,20 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="page header">
+            <image src="{{usrinfo.brand_logo}}" class="avatar" />
+            <label class="info">
+                 <text class="store">{{usrinfo.market_name}}</text>
+                 <text class="name">{{usrinfo.shop_name}}</text>
+            </label>
+        </view>
+        <block wx:for-items="{{userListInfo}}" wx:for-item="page" wx:key="*item">
+            <navigator url="{{page.pageUrl}}" class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">
+                    <view class='menu_one' style="">{{page.text}}</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </block>
+
+    </view>
+</view>

@@ -1,0 +1,29 @@
+page,
+.page,
+.page__bd {
+    height: 100%;
+}
+
+.page__bd {
+    padding-bottom: 0;
+}
+
+.weui-navbar__slider {
+    width: 10rem;
+}
+
+.weui-panel::after {
+    border-bottom: none;
+}
+
+.weui-media-box__title {
+    white-space: inherit;
+    word-wrap: normal;
+    word-break: normal;
+    font-size: 16px;
+}
+
+.weui-media-box__desc {
+    line-height: 1.5;
+    color: #cecece;
+}

@@ -1,0 +1,40 @@
+<template name="olist">
+    <view class="weui-panel">
+        <!--<view class="weui-panel__hd">待抢单列表</view>
+        
+            【xx】先生/女士正在【汶水商场】逛店，刚刚买了【床垫】
+            数联分析可能对店的【沙发】感兴趣，快快约他来您家，发送“邀约优惠活动”可能会让他心动哦
+        
+        -->
+        <view class="weui-panel__bd">
+            <view class="weui-loadmore" wx:if="{{loading}}">
+                <view class="weui-loading"></view>
+                <view class="weui-loadmore__tips">正在加载</view>
+            </view>
+            <view class="weui-media-box weui-media-box_text" 
+                wx:for="{{orders}}" 
+                wx:key="*this"
+                wx:for-index="id" wx:for-item="order">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">
+                    【{{order.orderCreateUser}}】先生/女士正在【{{order.marketName}}】逛店，刚刚买了【{{order.orderProductName}}】
+                    </view>
+                    <view class="weui-media-box__desc">数联分析可能对店的【{{order.categoryName}}】感兴趣，快快约他来您家，发送“邀约优惠活动”可能会让他心动哦</view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">{{order.orderCreateDate}}</view>
+                        <view class="weui-media-box__info__meta" class="fr">
+                            <button id="{{order.id}}" type="primary" plain="{{true}}" size="mini" bindtap="createOrder" hover-class="other-button-hover">抢单</button>
+                        </view>
+                    </view>
+            </view>
+        </view>
+
+         
+        <view class="weui-loadmore weui-loadmore_line" wx:if="{{orders.length===0 && !hasMore && !loading}}">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+        </view>
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" wx:if="{{orders.length && !hasMore && !loading}}">
+          <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+
+    </view>
+</template>

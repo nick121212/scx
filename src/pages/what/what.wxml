@@ -1,0 +1,14 @@
+<!--service.wxml-->
+<scroll-view scroll-y='true' class='service'>
+    <view class="box">
+        <view class="tit">短信抢约开关</view>
+        <!-- <view class="tit_s">
+            一.特别提示
+        </view> -->
+        <view class="cont">
+            <p>1.当打开短信通知的情况下，当有顾客在商场里购买商品的时候，会根据顾客购买的商品类型已短信的形式进行关联推送，比如顾客购买了床，则会给商城卖床头柜，衣柜等周边配套家具的商户发送短信通知
+                ，当商户收到短信的时候，打开小程序抢约页面，会看到一条抢约信息，点击抢约，则会向顾客发送该商户的店铺及优惠信息。</p>
+        </view>
+
+    </view>
+</scroll-view>

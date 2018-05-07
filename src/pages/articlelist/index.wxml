@@ -1,0 +1,54 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access shulian">
+
+            <view class="weui-panel__bd">
+                <!--如果show_tatus == 0表示该文章已经购买，点击直接跳转到页面详情，否则按照打折价格确定跳转页面-->
+
+                <!-- <navigator url="/pages/{{ article.show_status == 0 ? 'article' :(article.discount_price <= 0 
+                    ? 'article':'articlebriefinfo')}}/index?id={{article.id}}" -->
+                <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" 
+                wx:for="{{articles}}" wx:key="{{id}}" wx:for-index="id" bindtap = "gotodetail"
+                 data-status = "{{article.show_status}}" data-discountprice = "{{article.discount_price}}" data-id = "{{article.id}}"
+                 data-price = "{{article.sale_price}}"
+
+                    wx:for-item="article">
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title weui-media-box__title_in-text">{{article.title}}</view>
+                        <view class='image_inside'>
+                            <image src="{{article.cover_img_url}}" class="cover-image" />
+                        </view>
+                        <view class="weui-media-box__desc">{{article.sub_title}}</view>
+                        <view class="weui-media-box__info">
+                            <view wx:if="{{article.show_status == 1}}">
+                                <view class="weui-media-box__info__meta  price-free">￥{{article.sale_price}}</view>
+
+                                <view wx:if="{{article.discount_price <= 0}}" class="freecolor navtext weui-media-box__info__meta weui-media-box__info__meta_extra">
+                                    免费体验
+                                </view>
+                                <view wx:else class="weui-media-box__info__meta price weui-media-box__info__meta_extra">{{article.discount_price}}</view>
+                            </view>
+                            <view wx:else>
+                                <view class="weui-media-box__info__meta yidingyue ">已订阅</view>
+                            </view>
+                            <!-- <view style="float:right;">
+                                <view class="weui-media-box__info__meta">
+                                    <image class="weui-media-box__thumb_32" src="../../images/preview_64_64.png" />
+                                    <label>900</label>
+                                </view>
+                                <view class="weui-media-box__info__meta">
+                                    <image class="weui-media-box__thumb_32" src="../../images/like_64_64.png" />
+                                    <label>710</label>
+                                </view>
+                            </view> -->
+                        </view>
+
+                    </view>
+                </view>
+                <!-- </navigator> -->
+
+
+            </view>
+        </view>
+    </view>
+</view>

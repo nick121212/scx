@@ -1,0 +1,43 @@
+<template name="singlebuy">
+    <!--充值金额模块-->
+    <text class="balance-money">价格</text>
+
+    <!--充值金额分类模块-->
+    <view wx:if="{{singlePriceInfo.money > 0}}" class="balance-demo-single" id="balanceDemo">
+        <form>
+            <block>
+                <button  bindtap="selectNav" data-id="{{singlePriceInfo.id}}"
+                    data-money="{{singlePriceInfo.money}}">
+                <text  data-id="{{singlePriceInfo.id}}">{{singlePriceInfo.song}}
+                </text>
+                </button>
+
+            </block>
+        </form>
+    </view>
+
+
+    <view wx:else class="balance-demo-single-zero" id="balanceDemo">
+        <form>
+            <block>
+
+                <button  bindtap="selectNav" data-id="{{singlePriceInfo.id}}"
+                    data-money="{{singlePriceInfo.money}}">
+                 <text   data-id="{{singlePriceInfo.id}}">0元体验
+                 </text>
+                </button>
+            </block>
+        </form>
+    </view>
+
+    <!--去充值模块-->
+    <view class="goblance">
+        <view class="txt">
+            <view>点击去购买，即表示已经阅读并同意
+                <navigator url="/pages/service/service">《充值协议》</navigator>
+            </view>
+            <text>数联不会以任何形式要求您输入银行账号和密码</text>
+            <button bindtap="goblance">点击购买</button>
+        </view>
+    </view>
+</template>

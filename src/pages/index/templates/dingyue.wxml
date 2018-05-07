@@ -1,0 +1,48 @@
+<template name="index-dingyue">
+    <view class="page">
+        <view class="page__bd">
+            <view class="weui-panel weui-panel_access shulian">
+                <view class="weui-panel__hd">
+                    <label>我的订阅</label>
+                    <navigator style="float:right;" url="" redirect hover-class="className">
+                        更多订阅
+                    </navigator>
+                </view>
+                <view class="weui-panel__bd">
+                    <navigator url=""  hover-class="weui-cell_active">
+                        <view class="weui-media-box weui-media-box_appmsg" style="margin-bottom:0;">
+                            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                <image class="weui-media-box__thumb" src="../../../images/WechatIMG113.png" />  
+                            </view>
+                            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                <view class="weui-media-box__desc" style="margin:40rpx 0;">专家纬度分析，重点推荐</view>
+                                <view class="weui-media-box__title">孙琳琳：商场周边小区情报分析</view>
+                                <view class="weui-media-box__desc">上海汶水店周边五公里情报分析</view>
+                                <view class="weui-media-box__desc">2017.05.18</view>
+                            </view>
+                            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                <button style="font-size:10px;" type="primary" size="mini" >每周一</button>
+                                <label class="weui-media-box__desc">未读</label>
+                            </view>
+                        </view>
+                        <view class="weui-panel__ft">
+                            <view class="weui-cell weui-cell_access weui-cell_active" style="text-align:center;">
+                                <view class="weui-cell__bd">立即查看</view>
+                            </view>
+                        </view>
+                    </navigator>
+
+                    <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                            <image class="weui-media-box__thumb" src="../../../images/WechatIMG113.png" />  
+                        </view>
+                        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                            <view class="weui-media-box__title">孙琳琳：商场周边小区情报分析</view>
+                            <view class="weui-media-box__desc">热门</view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

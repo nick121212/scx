@@ -1,0 +1,47 @@
+<template name="joinunion">
+    <view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+        <view class="login_progress">2/3</view>
+        <view class="page__bd">
+            <view class="join_title">选择要加入的组，加入最关联的组可以提高获取用户的机会，会优先在组内共享用户的交易信息</view>
+            <!-- <scroll-view scroll-y style="height: {{baseinfo.windowHeight - 150}}px;"> -->
+            <view class="nav">
+                <scroll-view scroll-y style="height:{{baseinfo.windowHeight - 150}}px;" class="nav_left">
+                    <checkbox-group bindchange="checkboxChange">
+                        <label class="group_one weui-check__label " wx:for-items="{{navLeftItems}}">
+                        <checkbox class="weui-check" value="{{item.id}}" />
+                        
+                        <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                            <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+                            <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+                        </view>
+                       <view class="union_name">{{item.union_name}}</view>
+
+                    </label>
+                    </checkbox-group>
+                </scroll-view>
+                <scroll-view scroll-y style="height:{{baseinfo.windowHeight - 150}}px;" class="nav_right">
+                    <view wx:if="{{navRightItems.length > 0}}">
+
+                        <block wx:for="{{navRightItems}}">
+                            <view class="nav_right_items">
+                                <block wx:if="{{item.brand_logo != null}}">
+                                        <image class='shop_logo_img' src="{{item.brand_logo}}"></image>
+                                </block>
+                                <block wx:else>
+                                        <image class='shop_logo_img' src="http://temp.im/50x30"></image>
+                                </block>
+                                <text class='shop_member_info'>{{item.shop_name}}</text>
+                               
+                            </view>
+                        </block>
+                    </view>
+                </scroll-view>
+
+            </view>
+            <!-- </scroll-view> -->
+            <view class="weui-btn-area">
+                <button class="weui-btn" bindtap="onClickNext" type="primary">下一步</button>
+            </view>
+        </view>
+    </view>
+</template>

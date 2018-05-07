@@ -1,0 +1,8 @@
+
+
+
+<import src="./templates/mutibuy.wxml" />
+<import src="./templates/singlebuy.wxml" />
+<template wx:if ="{{mutibuy}}" is="mutibuy" data = "{{navList,curNav}}"></template>
+<template wx:if ="{{!mutibuy}}" is="singlebuy" data = "{{singlePriceInfo,curNav}}"></template>
+

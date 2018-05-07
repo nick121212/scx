@@ -1,0 +1,18 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="login_progress">3/3</view>
+    <form bindsubmit="formSubmit">
+       
+            <view class="join_title">设置一条约客信息，当顾客在您附近的关联商店进行逛店购物时，系统会发送您的信息，短信通知顾客。一条心动的打折优惠信息，可以大大提高吸引顾客到店的几率哦！</view>
+            <view class="smalltitle ">本商场[{{usrdata.shop_name}}]通知顾客专属信息</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell">
+                    <view class="weui-cell__bd">
+                        <textarea name="benefitvalue" class="weui-textarea" placeholder="本店为您准备了一份惊喜,凭此短信享有私人专属折扣，就在今日" style="height: 4.3em" />
+                    </view>
+                </view>
+            </view>
+            <view class="weui-btn-area">
+                <button class="weui-btn" formType="submit" type="primary">下一步</button>
+            </view>
+    </form>
+</view>

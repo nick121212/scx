@@ -1,0 +1,3 @@
+
+<import src="./templates/joinunion.wxml" /> 
+<template is="joinunion" data="{{navLeftItems,navRightItems,curNav,baseinfo}}" />

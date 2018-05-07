@@ -1,0 +1,14 @@
+<template name="historyunion">
+    
+    <view class="table">
+        <view class="tr">
+            <view class="th">名称</view>
+            <view class="th">加入时间</view>
+        </view>
+        <view class="tr" wx:for="{{historyUnions}}">
+            <view class="td">{{item.shop_union_name}}</view>
+            <view class="td is_time_info">{{item.create_date}}</view>
+        </view>
+
+    </view>
+</template>

@@ -1,0 +1,31 @@
+<template name="order">
+
+    <view class="weui-panel">
+        <view class="weui-panel__hd">待抢单列表</view>
+        <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text" 
+                wx:for="{{orders}}" 
+                wx:key="*this"
+                wx:for-index="id" wx:for-item="order">
+                <navigator url="/pages/order/index">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">
+                        {{order.orderCreateUser}}
+                        <button id="{{order.id}}" style="float:right;" type="primary" plain="{{true}}" size="mini" bindtap="createOrder" hover-class="other-button-hover">抢单</button>
+                    </view>
+                    <view class="weui-media-box__desc">{{order.orderProductName}}</view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">{{order.status}}</view>
+                        <view class="weui-media-box__info__meta">{{order.orderCreateDate}}</view>
+                        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">
+                            
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+
+            <view class="weui-loadmore weui-loadmore_line" wx:if="{{orders.length===0}}">
+                <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+                </view>
+        </view>
+    </view> 
+</template>

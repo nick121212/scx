@@ -1,0 +1,9 @@
+<template name="banner">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{banners}}" wx:key="{{id}}" wx:for-index="id" wx:for-item="banner">
+            <swiper-item data-banner="{{banner}}" bindtap="touchBanner">
+                <image src="{{banner.image}}" class="slide-image" />
+            </swiper-item>
+        </block>
+    </swiper>    
+</template>

@@ -1,0 +1,63 @@
+<template name="otherunion">
+    <!-- <scroll-view scroll-y style="height: {{baseinfo.windowHeight - 150}}px;"> -->
+        <view class="nav">
+            <scroll-view scroll-y style="height:{{baseinfo.windowHeight - 150}}px;" class="nav_left">
+
+            <!--
+                <checkbox-group bindchange="checkboxChange">
+                    <label class="weui-cell weui-check__label " wx:for-items="{{otherunions}}">
+                      <checkbox class="weui-check" value="{{item.id}}" />
+                        
+                    <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                        <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+                        <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+                    </view>
+                       <view class="weui-cell__bd">{{item.union_name}}</view>
+
+                    </label>
+                </checkbox-group>-->
+
+
+
+                    <checkbox-group bindchange="checkboxChange">
+                        <label class="group_one weui-check__label " wx:for-items="{{otherunions}}">
+                        <checkbox class="weui-check" value="{{item.id}}" />
+                        
+                        <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                            <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+                            <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+                        </view>
+                       <view class="union_name">{{item.union_name}}</view>
+
+                    </label>
+                    </checkbox-group>
+
+
+            </scroll-view>
+            <scroll-view scroll-y style="height: {{baseinfo.windowHeight - 150}}px;" class="nav_right">
+                <view wx:if="{{otherunionshops.length > 0}}">
+
+                    <block wx:for="{{otherunionshops}}">
+                        <view class="nav_right_items">
+                            <view>
+                                <block wx:if="{{item.brand_logo != null}}">
+                                    <image src="{{item.brand_logo}}"></image>
+                                </block>
+                                <block wx:else>
+                                    <image src="/images/default.png"></image>
+                                </block>
+                            </view>
+                            <view>
+                                <text>{{item.shop_name}}</text>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </scroll-view>
+
+        </view>
+    <!-- </scroll-view> -->
+    <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bindtap="changeUnion">加入所选商户组</button>
+    </view>
+</template>

@@ -1,0 +1,23 @@
+<view class="page">
+
+  <view class="page__hd">
+    <view class="page__title">{{briefinfo.title}}</view>
+  </view>
+
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__section">
+        <rich-text nodes="{{briefinfo.sub_title}}"></rich-text>
+      </view>
+    </view>
+
+
+     <view>
+      <picker bindchange="listenerPickerSelected" range="{{orderLst}}" value="{{index}}">
+          <button class="weui-btn" type="primary">购买</button>
+      </picker>
+    </view>
+    
+  </view>
+
+</view>

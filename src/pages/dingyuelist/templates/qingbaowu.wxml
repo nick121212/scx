@@ -1,0 +1,57 @@
+<template name="dingyue_qingbaowu">
+    <view class="weui-panel weui-panel_access shulian">
+        <view class="weui-panel__bd">
+
+            <!--点击查看最新(期刊号最大)一期的期刊详情  -->
+            <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{qingbaolst}}" wx:key="{{styleId}}"
+                wx:for-index="id" wx:for-item="qingbao">
+                <view>
+                    <view class="nav">
+                        <view class="nav_left">
+                            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                <!-- <image class="weui-media-box__thumb" src="../../../images/WechatIMG113.png" /> -->
+                                    <image wx:if="{{qingbao.imageUrl != ''}}" class="weui-media-box__thumb" src="{{qingbao.imageUrl}}" />
+                                     <image wx:else class="weui-media-box__thumb"  src="../../../images/WechatIMG113.png"/>
+                            </view>
+                        </view>
+                        <view class="nav_right">
+                            <view bindtap="gotodetail" data-id="{{qingbao.id}}" data-styleid="{{qingbao.styleId}}" data-url="{{qingbao.url}}" data-title="{{qingbao.title}}">
+                                <view class="weui-media-box__desc" style="margin:40rpx 0;">专家纬度分析，重点推荐</view>
+                                <view class="weui-media-box__title">{{qingbao.title}}</view>
+                                <view class="weui-media-box__desc">{{qingbao.introduction}}</view>
+                                <view class="weui-media-box__desc" style="color:#000;margin:10rpx 0;">订阅一季三个月，{{qingbao.period}}一发刊，共{{qingbao.pushNum}}期推送</view>
+                            </view>
+                        </view>
+
+                    </view>
+
+                     <!-- <image catchtap="showdissues" data-id="{{qingbao.id}}" class="more" src="../../../images/icon_nav_form.png"></image>  -->
+                     <view catchtap="showdissues" data-id="{{qingbao.id}}" > 
+                             <image  style="display:block;" class="more" src="../../../images/icon_nav_form.png"></image> 
+                             <text style=" font-size: 24rpx;color:gray">更多</text> 
+                    </view>  
+                    <view wx:if="{{qingbao.open && issues.length >0 }}" class="kind-list__item-bd  kind-list__item-bd_show">
+                        <view class="weui-cells weui-cells_show">
+                            <block wx:for="{{issues}}" wx:for-item="issue" wx:key="*this">
+                                <navigator url="/pages/qingbaodetail/index?id={{qingbao.id}}&styleid={{qingbao.styleId}}&issueid={{issue.issueId}}&url={{qingbao.url}}&title={{qingbao.title}}" class="weui-cell weui-cell_access">
+                                    <view class="weui-cell__bd">{{issue.issueId}}期</view>
+                                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                                </navigator>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+
+                
+            </view>
+            <!-- </navigator> -->
+        </view>
+
+        <view class="weui-loadmore weui-loadmore_line" wx:if="{{qingbaolst.length===0 && !qingbaohasMore  && !qingbaoloading}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">您还没有订阅情报物</view>
+        </view>
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" wx:if="{{qingbaolst.length && !qingbaohasMore&& !qingbaoloading}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+    </view>
+</template>

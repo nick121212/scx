@@ -1,0 +1,40 @@
+<template name="index-header">
+    <view class="page header">
+        <block wx:if="{{usrinfo.brand_logo != undefined}}">
+            <image src="{{usrinfo.brand_logo}}" class="avatar" />
+            <label class="info">
+            <text class="store">{{usrinfo.market_name}}</text>
+            <text class="name">{{usrinfo.shop_name}}</text>
+         </label>
+
+            <!--
+        <label class="tip">{{enableMessage?"短信开启":"短信关闭"}}</label>
+        <switch class="switch" checked="{{enableMessage}}" bindchange="enableMessageChanged">
+        </switch> 
+
+        -->
+        </block>
+        <block wx:else>
+            <navigator url="/pages/welcome/loading/index">
+                <image src="../../../images/unlogin.png" class="avatar_big" />
+                <label class="login">
+                <text class="store">点击登陆</text>
+                 </label>
+            </navigator>
+        </block>
+        <view class="base-info">
+            <block wx:if="{{usrinfo.brand_logo != undefined}}">
+                <label class="base-info-1">联单抢</label>
+                <label class="base-info-num">{{extradata.guestAttractNum == undefined ? 0:extradata.guestAttractNum}}</label>
+                <label class="base-info-2">
+                <label >吸引到</label>
+                <label>人关注</label>
+                </label>
+            </block>
+        </view>
+    </view>
+
+    <!-- <label class="tip">{{enableMessage?"短信开启":"短信关闭"}}</label>
+        <switch class="switch" checked="{{enableMessage}}" bindchange="enableMessageChanged">
+        </switch> -->
+</template>
